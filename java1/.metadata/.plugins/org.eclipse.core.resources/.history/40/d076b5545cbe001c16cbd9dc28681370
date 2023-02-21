@@ -1,0 +1,18 @@
+package h1;
+//模块类
+public class Modulecomponents {
+	//Cameramodule 相机模块
+	private int Cameramodule;
+	//Communication module 通信模块
+	private int Communicationmodule;
+	//Screenmodules 屏幕模块
+	private int intScreenmodules;
+	//Chipmodules 芯片模块
+	private int Chipmodules;
+	public Modulecomponents(int Cameramodule, int Communicationmodule, int intscreenmodules, int Chipmodules ) {
+		
+	}
+
+
+
+}

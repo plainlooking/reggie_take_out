@@ -1,0 +1,36 @@
+                                                                                                                                                                                                                       package mingpian;
+
+import java.util.Scanner;
+import java.util.Set;
+public class tianjia {
+	public void denglu() {
+		System.out.println("    ?????????   v10");
+		System.out.println("1.??????");
+		System.out.println("2.??????");
+		System.out.println("3.??????");
+		System.out.println("4.??????");
+		System.out.println("5.?????????????");
+		System.out.println("6.?????");
+	}
+	public void addin(){
+//	String name;
+//	String zhiwei;
+//	String dizhi;
+	Scanner in= new Scanner(System.in);
+	System.out.print("??????????");
+	String xuhao= in.nextLine();
+	System.out.print("????????????");
+	String name= in.nextLine();
+	System.out.print("???????λ??");
+	String zhiwei = in.nextLine();
+	System.out.print("??????????");
+	String dizhi= in.nextLine();
+	}
+	public void shan() {
+		System.out.println("???????????????????");
+		Scanner c = new Scanner(System.in);
+		String name=c.nextLine();
+	}
+	
+
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.luo.mybatis.mapper.CacheMapper">
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache" />
+    <!--    int EmpByEid(@Param("eid") Integer eid);-->
+    <select id="EmpByEid" resultType="emp">
+        select *
+        from t_emp
+        where eid = #{eid}
+    </select>
+
+    <!--    void EmpByEid2(Emp emp);-->
+    <insert id="EmpByEid2">
+        insert into t_emp
+        values (null, #{empName}, #{age}, #{sex}, #{email}, null)
+    </insert>
+
+</mapper>

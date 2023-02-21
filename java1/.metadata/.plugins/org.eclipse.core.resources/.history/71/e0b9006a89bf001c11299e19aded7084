@@ -1,0 +1,21 @@
+package h1;
+
+public class huawei {
+	int WuG=1000;
+	public class hauwei extends Modulecomponents{
+
+		public hauwei(int Cameramodule1, int Communicationmodule1, int intscreenmodules1, int Chipmodules1) {
+			super(Cameramodule1, Communicationmodule1, intscreenmodules1, Chipmodules1);
+			
+		}
+		int are
+		int s=Communicationmodule/100*10;
+		   java.util.Random random1=new java.util.Random();
+		    for (int i=0;i<s;i++) {
+		    	int	a2=random1.nextInt();
+		    }
+		    System.out.println(s);
+		
+	
+
+}

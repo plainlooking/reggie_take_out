@@ -1,0 +1,36 @@
+package h1;
+import java.util.Random;
+//模块类
+public class Modulecomponents {
+	//Cameramodule 相机模块
+	static int Cameramodule=1000;
+	//Communication module 通信模块
+	static int Communicationmodule=1000;
+	/*creenmodules 屏幕模块*/
+	static int intScreenmodules=1000;
+	//Chipmodules 芯片模块
+	static int Chipmodules=1000;
+	
+	public Modulecomponents(int Cameramodule, int Communicationmodule, int intscreenmodules, int Chipmodules ) {
+		this.Cameramodule=Cameramodule;
+		
+		this.Communicationmodule=Communicationmodule;
+		
+		this.intScreenmodules=intscreenmodules;
+		
+		this.Chipmodules=Chipmodules;
+	}
+	public static void main(String[] args) {
+	int i=(int) (Cameramodule / 100 * 10);
+		
+	   java.util.Random random=new java.util.Random();
+	    for (int i;i<i*10;i++) {
+	    	
+	    	System.out.println(random.());
+	    }
+	    }
+	
+	
+
+
+}

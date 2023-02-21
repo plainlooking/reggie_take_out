@@ -1,0 +1,17 @@
+package h1;
+
+public class xiaomi extends Modulecomponents{
+
+	public xiaomi(int Cameramodule, int Communicationmodule, int intscreenmodules, int Chipmodules) {
+		super(Cameramodule, Communicationmodule, intscreenmodules, Chipmodules);
+		// TODO 自动生成的构造函数存根
+	}
+	public static void main(String[] args) {
+		   int n=Cameramodule/100*10;
+		   java.util.Random random=new java.util.Random();
+		    for (int i;i<n;i++) {
+		    	
+		    	System.out.println(Random.());
+		    }
+	}
+}

@@ -1,0 +1,28 @@
+package h1;
+import java.util.Random;
+//模块类
+public class Modulecomponents {
+	//Cameramodule 相机模块
+	static int Cameramodule=1000;
+	//Communication module 通信模块
+	static int Communicationmodule=1000;
+	/*creenmodules 屏幕模块*/
+	static int intScreenmodules=1000;
+	//Chipmodules 芯片模块
+	static int Chipmodules=1000;
+	
+	public Modulecomponents(int Cameramodule1, int Communicationmodule1, int intscreenmodules1, int Chipmodules1 ) {
+		this.Cameramodule=Cameramodule1;
+		
+		this.Communicationmodule=Communicationmodule1;
+		
+		this.intScreenmodules=intscreenmodules1;
+		
+		this.Chipmodules=Chipmodules1;
+	}
+	
+	
+	
+
+
+}

@@ -1,0 +1,9 @@
+package h1;
+
+public class Modulecomponents {
+	//Cameramodule 相机模块
+	private int Cameramodule;
+	//Communication module 通信模块
+	private int Communicationmodule;
+
+}

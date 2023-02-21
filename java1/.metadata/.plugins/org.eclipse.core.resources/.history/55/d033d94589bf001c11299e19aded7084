@@ -1,0 +1,16 @@
+package h1;
+
+public class huawei {
+	int WuG=1000;
+	public class hauwei extends Modulecomponents{
+
+		public hauwei(int Cameramodule1, int Communicationmodule1, int intscreenmodules1, int Chipmodules1) {
+			super(Cameramodule1, Communicationmodule1, intscreenmodules1, Chipmodules1);
+			
+		}
+		int area(){
+			return (e+s+y+f) /1000;
+		}
+	
+
+}

@@ -1,0 +1,31 @@
+package h1;
+//模块类
+public class Modulecomponents {
+	public static void main(String[] args) {
+	//Cameramodule 相机模块
+	int Cameramodule;
+	//Communication module 通信模块
+	int Communicationmodule;
+	/*creenmodules 屏幕模块*/
+	int intScreenmodules;
+	//Chipmodules 芯片模块
+    int Chipmodules;
+    Cameramodule random=new Cameramodule();
+    for (int i=0;i<10;i++) {
+    	System.out.print(random.Camerramodule(1000));
+    }
+    }
+	public Modulecomponents(int Cameramodule, int Communicationmodule, int intscreenmodules, int Chipmodules ) {
+		this.Cameramodule=Cameramodule;
+		
+		this.Communicationmodule=Communicationmodule;
+		
+		this.intScreenmodules=intscreenmodules;
+		
+		this.Chipmodules=Chipmodules;
+	}
+	
+	
+
+
+}

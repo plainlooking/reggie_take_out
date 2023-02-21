@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.luo.mybatis.mapper.EmpMapper">
+    <!--  List<Emp> getAllEmp();-->
+    <select id="getAllEmp" resultType="Emp">
+        <!-- 方法1，select eid id, emp_name empName, age, sex, email from t_emp-->
+        select * from t_emp
+    </select>
+    <!--  方法2 自定义映射resultMap id唯一标识不能重复-->
+    <!--    <resultMap id="h" type="emp">-->
+    <!--        <id property="eid" column="eid"></id>-->
+    <!--        <result property="empName" column="emp_name"></result>-->
+    <!--        <result property="age" column="age"></result>-->
+    <!--        <result property="sex" column="sex"></result>-->
+    <!--        <result property="email" column="email"></result>-->
+    <!--    </resultMap>-->
+    <!--    <select id="getAllEmp" resultMap="h">-->
+    <!--        select *-->
+    <!--        from t_emp-->
+    <!--    </select>-->
+    <!--     Emp getEmpAndDept(@Param("eid") Integer eid);-->
+    <resultMap id="h" type="emp">
+        <id property="eid" column="eid"></id>
+        <result property="empName" column="emp_name"></result>
+        <result property="age" column="age"></result>
+        <result property="sex" column="sex"></result>
+        <result property="email" column="email"></result>
+        <result property="dept.did" column="did"></result>
+        <result property="dept.deptName" column="dept_name"></result>
+    </resultMap>
+
+
+    <resultMap id="h2" type="emp">
+        <id property="eid" column="eid"></id>
+        <result property="empName" column="emp_name"></result>
+        <result property="age" column="age"></result>
+        <result property="sex" column="sex"></result>
+        <result property="email" column="email"></result>
+        <association property="dept" javaType="Dept">
+            <id property="did" column="did"></id>
+            <result property="deptName" column="dept_name"></result>
+        </association>
+    </resultMap>
+    <select id="getEmpAndDept" resultMap="h2">
+        select *
+        from t_emp
+                 left join t_dept on t_emp.did = t_dept.did
+        where t_emp.eid = #{eid}
+    </select>
+
+    <!--     Emp getEmpAndDeptByStepOne(@Param("eid") Integer eid);-->
+    <resultMap id="h3" type="emp">
+        <id property="eid" column="eid"></id>
+        <result property="empName" column="emp_name"></result>
+        <result property="age" column="age"></result>
+        <result property="sex" column="sex"></result>
+        <result property="email" column="email"></result>
+        <!--
+        association：处理多对一的映射关系
+        property：需要处理多对的映射关系的属性名
+        javaType：该属性的类型
+        select：设置sql分布查询的唯一标识(namespace,SqlId或mapper接口的全类方法，方法名)
+        column：设置分布查询条件
+        fetchType：当开启了全局的延迟加载之后，可以通过该属性手动控制延迟加载的效果，fetchType="lazy(延迟加载)|eager(立即加载)"
+        -->
+        <association property="dept" select="com.luo.mybatis.mapper.DeptMapper.getEmpAndDeptByStepTow"
+                     column="did"
+                     fetchType="eager"></association>
+    </resultMap>
+    <select id="getEmpAndDeptByStepOne" resultMap="h3">
+        select *
+        from t_emp
+        where eid = #{eid}
+    </select>
+
+    <!--    List<Emp> getDeptAndEmpByStepTow1(@Param("did") Integer did);-->
+    <select id="getDeptAndEmpByStepTow1" resultType="emp">
+        select * from t_emp where did=#{did}
+    </select>
+
+</mapper>
